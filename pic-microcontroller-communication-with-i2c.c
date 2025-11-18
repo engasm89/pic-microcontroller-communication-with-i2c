@@ -1,3 +1,11 @@
+/*
+ * Course: Pic Microcontroller Communication With I2c
+ * Platform: PIC Microcontroller
+ * Author: Ashraf S A AlMadhoun
+ * Purpose: Auto-generated metadata block to document the learning goals.
+ * Notes: Auto-generated metadata block (2025-11-18)
+ */
+
 #include <stdio.h> // Include I/O for I2C logs
 #include <unistd.h> // Include POSIX sleep for timing
 
@@ -28,6 +36,7 @@ int pic_i2c_read(unsigned char addr, unsigned char reg, unsigned char *val) { //
 } // End pic_i2c_read
 
 // Entry demonstrating PIC I2C communication
+// Main routine: orchestrates the pic microcontroller communication with i2c scenario
 int main(void) { // Begin main
   printf("PIC Microcontroller Communication with I2C\n"); // Title
   pic_i2c_init(100000); // Initialize PIC I2C
