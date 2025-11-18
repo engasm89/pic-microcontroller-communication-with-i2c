@@ -1,5 +1,41 @@
 /*
  * Course: Pic Microcontroller Communication With I2c
+ * Platform: Raspberry Pi
+ * Author: Ashraf S A AlMadhoun
+ * 
+ * Description:
+ * This code demonstrates the core concepts taught in the "Pic Microcontroller Communication With I2c" course.
+ * It provides a practical implementation that students can study, modify, and
+ * use as a foundation for their own projects.
+ * 
+ * Learning Objectives:
+ * - Understand the fundamental principles covered in this course
+ * - Practice implementing the concepts with real code
+ * - Build a working example that can be extended
+ * 
+ * Hardware Requirements:
+ * - Development board (Raspberry Pi)
+ * - Components as specified in CIRCUIT.md
+ * - USB cable for programming
+ * 
+ * Pin Connections:
+ * Refer to CIRCUIT.md for detailed wiring diagrams and pin assignments.
+ * 
+ * Usage:
+ * 1. Review the code structure and comments
+ * 2. Connect hardware according to CIRCUIT.md
+ * 3. Upload code to your development board
+ * 4. Monitor serial output for debugging
+ * 
+ * Course Link: https://www.udemy.com/course/pic-microcontroller-communication-with-i2c/
+ * Repository: https://github.com/engasm89/pic-microcontroller-communication-with-i2c
+ * 
+ * Copyright (c) 2025 Ashraf S A AlMadhoun
+ * Licensed under MIT License
+ */
+
+/*
+ * Course: Pic Microcontroller Communication With I2c
  * Platform: PIC Microcontroller
  * Author: Ashraf S A AlMadhoun
  * Purpose: Auto-generated metadata block to document the learning goals.
@@ -43,9 +79,9 @@ int pic_i2c_read(unsigned char addr, unsigned char reg, unsigned char *val) { //
   return 1; // Success
 } // End pic_i2c_read
 
-// Entry demonstrating PIC I2C communication
+// Program entry point demonstrating PIC I2C communication
 // Main routine: orchestrates the pic microcontroller communication with i2c scenario
-int main(void) { // Begin main
+int main(void) { // Main function implementation
   printf("PIC Microcontroller Communication with I2C\n"); // Title
   pic_i2c_init(100000); // Initialize PIC I2C
   unsigned char value = 0; // Prepare value var
@@ -55,6 +91,6 @@ int main(void) { // Begin main
     printf("{\"i2c_on\":%d,\"last_val\":0x%02X}\n", pic_i2c_on, value); // Print status
     usleep(300000); // Delay 300 ms
   } // End loop
-  return 0; // Exit success
-} // End main
+  return 0; // Exit successfully
+} // End of main function
 
